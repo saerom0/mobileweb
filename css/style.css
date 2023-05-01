@@ -64,6 +64,55 @@ body {
 	font-family: var(--logo-en);
 }
 
+/* main header CSS */
+.main-header {
+	height: 80px;
+	background-color: var(--crimson);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btn-back {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-size: 22px;
+	flex: 1;
+}
+.main-header .logo {
+	color: #fff;
+	font-size: 26px;
+	margin: 0;
+	flex: 6;
+	text-align: center;
+}
+.user-alarm {
+	flex: 1;
+	font-size: 22px;
+	color: #fff;
+}
+.user-alarm span {
+	position: relative;
+}
+.user-alarm span em {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: var(--royalblue);
+	border-radius: 50%;
+	right: -3px;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.user-alarm span em:before {
+	content: attr(data-count);
+	font-style: normal;
+	font-size: 10px;
+	font-family: var(--primary-en);
+}
+
 /* ### Preloading html ### */
 .preloading {
 	height: 750px;

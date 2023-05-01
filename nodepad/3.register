@@ -21,10 +21,10 @@
 					input[type=text] + select + select
 			.signup-field
 				span > em
-					input[type=text] + a.btn-getcode
+					input[type=text] + a.btn-signup
 			.agree-term
 				label
-					(input[type=checkbox] + em * 3
+					(input[type=checkbox] + em)* 3
 			a.btn-signup
 		#gnb
 			[same html structure]

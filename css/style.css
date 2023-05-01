@@ -12,6 +12,11 @@ body {
 	font-size: 14px;
 }
 
+[class*='content'] {
+	padding: 20px;
+	margin-bottom: 65px;
+}
+
 /* ### Common CSS ### */
 .btn-primary {
 	font-size: 18px;
@@ -149,9 +154,7 @@ body {
 	height: 250px;
 	background: url('/images/signin-header.jpg') no-repeat;
 }
-.signin-content {
-	padding: 20px;
-}
+
 .signin-header {
 	text-align: center;
 }
@@ -225,4 +228,45 @@ body {
 
 .social-btn a {
 	margin: 2px;
+}
+
+/* ### Signup html ### */
+.signup-field {
+	margin-bottom: 10px;
+}
+.signup-field span {
+	display: block;
+}
+.signup-field span em {
+	color: var(--crimson);
+}
+.signup-field.id-pw input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid var(--gainsboro);
+	padding: 8px 0;
+}
+.signup-field.id-pw input::placeholder {
+	color: var(--silver-gray);
+}
+.signup-field.birth div {
+	display: flex;
+	gap: 10px;
+}
+.signup-field.birth div > * {
+	width: calc(100% / 3);
+}
+
+.signup-field.phone div {
+	display: flex;
+	gap: 10px;
+}
+.signup-field.phone div input {
+	flex: 2;
+}
+.signup-field.phone div .btn-getcode {
+	flex: 1;
+}
+.btn-signup {
+	background-color: var(--crimson);
 }

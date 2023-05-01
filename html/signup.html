@@ -18,9 +18,42 @@
       <!-- main-header include -->
       <div class="main-header-include"></div>
       <!-- main-header include -->
-      <div class="signup-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nesciunt, esse
-        asperiores quam enim modi ducimus consequatur temporibus ea fugit eum, a quo maiores cumque quas? Voluptatem
-        cumque quo cum!</div>
+      <div class="signup-content">
+        <div class="signup-field id-pw">
+          <span>이메일<em>*</em></span>
+          <input type="email" placeholder="이메일 입력">
+        </div>
+        <div class="signup-field id-pw">
+          <span>비밀번호<em>*</em></span>
+          <input type="password" placeholder="비밀번호 입력(영문, 숫자,특수기호 조합 8~16자리)">
+        </div>
+        <div class="signup-field id-pw">
+          <span>비밀번호 확인<em>*</em></span>
+          <input type="password" placeholder="비밀번호 입력(영문, 숫자,특수기호 조합 8~16자리)">
+        </div>
+        <div class="signup-field birth">
+          <span>생년월일<em>*</em></span>
+          <div>
+            <input type="text" placeholder="년도(4자리)">
+            <select name="month" id="month">
+              <option value="month">월</option>
+            </select>
+            <select name="date" id="date">
+              <option value="date">일</option>
+            </select>
+          </div>
+        </div>
+        <div class="signup-field phone">
+          <span>휴대전화<em>*</em></span>
+          <div>
+            <input type="text" placeholder="폰번호 입력">
+            <button class="btn-getcode">인증번호 받기</button>
+          </div>
+
+        </div>
+        <div class="agree-term"></div>
+        <button class="btn-primary btn-signup">가입하기</button>
+      </div>
       <!-- GNB include -->
       <div class="gnb-include"></div>
       <!-- GNB include -->

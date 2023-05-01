@@ -1,0 +1,65 @@
+.container.front
+	.front-inner
+		.front-header
+			[same html structure]
+			
+		.front-content
+			.category-navigation
+				a * 5
+			.front-slider
+				(a > img) * 3
+			.goods-suggestion.today 
+				.good-suggestion-header
+					h2 + p
+				.goods-suggestion-items
+					.goods-suggestion-item
+						.thumb > img
+						.desc
+							.goods-badge
+								span.badge.new
+								span.badge.hot
+							.goods-title
+								h3
+								.goods-title
+									span + b + s
+				a.btn-goods-suggestion-more
+			.banner
+				a > img
+			.goods-suggestion.new-arrival
+				[same html structure]
+			.banner
+				a > img
+			.food-type
+				.tab-menu
+					input[type=radio] * 6
+					.tab-btn
+						label * 6
+					.tabs
+						.tab
+							.tab-item
+								.thumb > img
+								.desc
+									.goods-badge	
+										.badge-wish
+											span.badge.new
+											span.badge.hot
+										span.wish
+									.goods-title
+										h3
+										div
+											span + b + s
+				a.btn-goods-suggestion-more					
+					
+					
+			.front-footer
+				h3
+				.company-link
+					a * 4
+				.company-info
+					.company-info-title
+						h3 + button.btn-view-more
+					.company-info-more
+						p > span * 5
+			
+		#gnb
+			[same html structure]

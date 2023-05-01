@@ -1,0 +1,27 @@
+.container.search
+	.search-inner
+		.main-header
+			[same html structure]
+		.search-content
+			.search-field
+				input[type=text]
+				i + span
+			.search-recent
+				.title
+					h2 + a.btn-all-clear
+				.items
+					.item
+						span + a.btn-clear > i
+					.item
+						span + a.btn-clear > i
+					.item
+						span + a.btn-clear > i
+			.list-search
+				.title
+					h2 + h3
+				ul.search-increase-list
+					li * 7	
+		#gnb
+		 	[same html structure]
+			
+			

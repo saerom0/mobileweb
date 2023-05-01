@@ -1,0 +1,52 @@
+.container.goods-detail
+	.goods-detail-inner
+		.goods-detail-header
+			button.btn-back > i
+			h1.logo
+			.navigator
+		.goods-detail-content
+			.goods-slider
+				.goods-slider-item
+					a > img
+			.goods-info
+				.goods-rating
+					.stars
+						(i * 5) + em
+				.goods-badge
+					span.badge.new
+					span.badge.hot
+				.goods-title
+					h3
+					div
+						span
+						span > s + b
+				.goods-delivery-info
+					b
+					p > span * 3
+			.goods-detail
+				[normal html structure]
+			.goods-accordion
+				(.title + .detail) * 4
+		.goods-order-info
+			div
+			.goods-order-choice
+				span.wish
+				button.btn-order-choice
+			.goods-order-final
+				.goods-order-final-info
+					span.info-badge.arrival
+					h3
+					.price-quantity
+						span
+						span
+						span
+						.final-quantity
+							button.minus
+							input[type=text]
+							button.plus
+				.payment-benefit
+					b + p > a
+				.goos-order-btns
+					button.btn-cart
+					button.btn-now-order
+		

@@ -1,0 +1,36 @@
+.container.mypage
+	.mypage-inner
+		.main-header
+			[same html structure]
+			 
+		.mypage-content
+			.user-info
+				.user-photo
+					img
+				.user-summary
+					.rating
+					h2.nickname
+					.point-coupon
+						.point
+							span * 2
+						.coupon
+							span * 2
+			.delivering
+				h2
+				.delivering-items
+					.delivering-item
+						.thumb
+							img
+						.desc
+							p + b 					
+					
+			.banner
+				a > img
+			.user-shortcut
+				(a > i + span) * 8 
+			button.btn-signout
+			
+		#gnb
+			[same html structure]
+			
+			

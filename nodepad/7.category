@@ -1,0 +1,20 @@
+.container.category
+	.category-inner
+		.main-header
+			[same html structure]
+		.category-content
+			.category-accordion 
+				.title
+				.detail > a * n
+				.title
+				.detail > a * n
+				.title
+				.detail > a * n
+				.title
+				.detail > a * n
+				.title
+				.detail > a * n
+		#gnb
+			[same html structure]
+			
+			

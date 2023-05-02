@@ -5,7 +5,7 @@
 			h1.logo
 			.user-alarm
 				span > i + em
-		.sginup-content
+		.signup-content
 			.signup-field
 				span > em
 				input[type=email] 

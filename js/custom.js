@@ -12,4 +12,12 @@ $(function () {
 		$(this).siblings('.category-accordion .title').removeClass('active');
 		$(this).toggleClass('active');
 	});
+
+	/* recent search result */
+	$('.search-recent .btn-clear').on('click', function () {
+		$(this).parent().hide();
+	});
+	$('.btn-all-clear').on('click', function () {
+		$('.search-recent .item').hide();
+	});
 });

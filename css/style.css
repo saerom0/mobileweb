@@ -27,6 +27,22 @@ body {
 	padding: 8px;
 }
 
+/* clear buttons */
+.btn-all-clear {
+	border: none;
+	font-size: 11px;
+	background-color: var(--gainsboro);
+	color: #fff;
+	border-radius: 20px;
+	padding: 2px 8px;
+}
+.btn-clear {
+	border: none;
+	background-color: transparent;
+	font-size: 18px;
+	color: var(--silver-gray);
+}
+
 /* GNB CSS */
 
 #gnb {
@@ -349,4 +365,43 @@ body {
 .category-accordion .detail a {
 	display: block;
 	padding: 2px 0;
+}
+
+/* ### Search html ### */
+.search-field input {
+	border: none;
+	padding: 8px;
+	width: 100%;
+	border-radius: 30px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	background: var(--snow) url('/images/icon-search.svg') no-repeat center left
+		15px;
+	padding-left: 40px;
+}
+
+.search-recent {
+	margin: 25px 0;
+}
+.search-recent .title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.search-recent .title h2 {
+	margin: 0;
+	color: var(--crimson);
+	font-size: 16px;
+}
+.search-recent .items {
+	margin: 15px 0;
+}
+.search-recent .items .item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--gloudy-gray);
+	padding: 8px 0;
+}
+.search-recent .items .item span {
+	font-size: 15px;
 }

@@ -16,7 +16,7 @@
 						span + a.btn-clear > i
 					.item
 						span + a.btn-clear > i
-			.list-search
+			.search-increase
 				.title
 					h2 + h3
 				ul.search-increase-list

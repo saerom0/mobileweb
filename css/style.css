@@ -116,22 +116,30 @@ body {
 	font-size: 22px;
 	color: #fff;
 }
-.user-alarm span {
+.user-alarm span,
+.cart-alarm b {
 	position: relative;
 }
-.user-alarm span em {
+.user-alarm span em,
+.cart-alarm b em {
 	position: absolute;
 	width: 15px;
 	height: 15px;
 	background-color: var(--royalblue);
 	border-radius: 50%;
-	right: -3px;
+	right: -2px;
 	top: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.user-alarm span em:before {
+
+.cart-alarm b em {
+	color: #fff;
+	right: 22px;
+}
+.user-alarm span em::before,
+.cart-alarm b em::before {
 	content: attr(data-count);
 	font-style: normal;
 	font-size: 10px;
@@ -405,31 +413,24 @@ body {
 .search-recent .items .item span {
 	font-size: 15px;
 }
-.search-increase {
-}
 
 .search-increase h2 {
 	font-size: 16px;
 	margin-bottom: 5px;
 }
-.search-increase .title h3 {
+.search-increase .title p {
 	padding: 0;
 }
 .search-increase-list {
 	list-style: none;
 	padding-left: 0;
 	counter-reset: rank 0;
+	line-height: 2em;
+	font-size: 15px;
 }
 .search-increase-list li::before {
 	counter-increment: rank;
 	content: counter(rank);
 	margin-right: 10px;
-	background-color: var(--dark-gray);
-	color: #fff;
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	border-radius: 50px;
-	text-align: center;
-	font-size: 12px;
+	font-weight: 500;
 }

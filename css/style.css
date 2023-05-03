@@ -28,16 +28,20 @@ body {
 }
 
 /* GNB CSS */
+
 #gnb {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+	border-top: 1px solid var(--gloudy-gray);
+	/* border: 1px solid #000; */
 	height: 65px;
 	display: flex;
 	justify-content: space-between;
-	border-top: 1px solid var(--gloudy-gray);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 	background-color: #fff;
+	/* align-items: center; */
 }
+
 #gnb a {
 	display: flex;
 	flex: 1;
@@ -131,7 +135,7 @@ body {
 	position: absolute;
 	top: 75px;
 	left: 30px;
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
 }
 .heading-preloading .logo {
 	font-size: 32px;
@@ -232,6 +236,7 @@ body {
 }
 
 /* ### Signup html ### */
+
 .signup-field {
 	margin-bottom: 10px;
 }
@@ -297,4 +302,51 @@ body {
 .signup-field.birth div > *:focus::placeholder,
 .signup-field.phone div input:focus::placeholder {
 	visibility: hidden;
+}
+
+/* ### Category html ### */
+.category-content {
+	padding: 0;
+}
+.category-accordion {
+	font-size: 16px;
+}
+.category-accordion .title {
+	border-bottom: 1px solid var(--gloudy-gray);
+	height: 50px;
+	display: flex;
+	align-items: center;
+	color: var(--crimson);
+	font-weight: 400;
+	position: relative;
+	padding: 0 20px;
+}
+.category-accordion .title:after,
+.user-shortcut a:after {
+	content: '\F282';
+	font-family: bootstrap-icons;
+	background-color: var(--fuschia);
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 13px;
+	position: absolute;
+	right: 20px;
+	transition: 0.35s;
+}
+.category-accordion .title.active:after {
+	background-color: transparent;
+	transform: rotateX(180deg);
+}
+.category-accordion .detail {
+	display: none;
+	line-height: 2em;
+	padding: 7px 0;
+	background-color: var(--snow);
+	padding: 0 20px;
+}
+.category-accordion .detail a {
+	display: block;
+	padding: 2px 0;
 }

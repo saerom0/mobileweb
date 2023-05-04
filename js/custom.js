@@ -45,13 +45,20 @@ $(function () {
 		$('.cart-item-info .delivery-date b').eq(1).text(date);
 	});
 
-	/* Cart items */
+	/* Cart items 삭제버튼*/
 	$('.cart-items-header .btn-all-clear').on('click', function () {
 		$('.cart-item').hide();
 		$('.cart-items-summary .price').text('0원');
+		$('.cart-items').html(
+			'<p class="no-item">장바구니에 담긴 상품이 없습니다.</p>'
+		);
+	});
+	$('.cart-item-title .btn-clear').on('click', function () {
+		console.log('click');
+		$(this).parent().parent().hide();
 	});
 
-	/* cart-item의 수량버튼*/
+	/* cart-item의 수량버튼 */
 	$('.count-wrap button').on('click', function (e) {
 		e.preventDefault();
 		var $count = $(this).parent('.count-wrap').find('.input');
@@ -61,16 +68,10 @@ $(function () {
 		var num = now;
 
 		if ($(this).hasClass('minus')) {
-			if (now > min) {
-				num = now - 1;
-			}
+			if (now > min) num = now - 1;
 		} else {
-			if (now < max) {
-				num = now + 1;
-			}
+			if (now < max) num = now + 1;
 		}
-		if (num != now) {
-			$count.val(num);
-		}
+		if (num != now) $count.val(num);
 	});
 });

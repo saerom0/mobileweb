@@ -326,6 +326,31 @@ body {
 	visibility: hidden;
 }
 
+/* ### Front html ### */
+.front {
+}
+.front-inner {
+}
+.front-content {
+	padding: 0;
+}
+/* Category Navigation */
+.category-navigation {
+	border: 1px solid #000;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.category-navigation a {
+	border: 1px solid #000;
+	flex: 1;
+	/* float: left;
+	width: 20%;
+	text-align: center;
+	height: 100%;
+	line-height: 50; */
+}
 /* ### Category html ### */
 .category-content {
 	padding: 0;
@@ -590,6 +615,7 @@ body {
 
 .cart-item {
 	padding: 20px;
+	border-bottom: 1px solid var(--gloudy-gray);
 }
 .cart-items-header {
 	display: flex;
@@ -606,6 +632,9 @@ body {
 	align-items: flex-start;
 	gap: 8px;
 	margin-bottom: 15px;
+}
+.cart-item-title span {
+	font-weight: normal;
 }
 .cart-item-title input[type='checkbox'] {
 	position: relative;

@@ -47,7 +47,6 @@ body {
 
 #gnb {
 	border-top: 1px solid var(--gloudy-gray);
-	/* border: 1px solid #000; */
 	height: 65px;
 	display: flex;
 	justify-content: space-between;
@@ -55,7 +54,6 @@ body {
 	bottom: 0;
 	width: 100%;
 	background-color: #fff;
-	/* align-items: center; */
 }
 
 #gnb a {
@@ -433,4 +431,152 @@ body {
 	content: counter(rank);
 	margin-right: 10px;
 	font-weight: 500;
+}
+
+/* ### Mypage CSS ### */
+.mypage-content {
+	padding: 0;
+}
+.mypage-content .user-info {
+	display: flex;
+	padding: 20px;
+	gap: 10px;
+}
+.user-photo {
+	flex: 1;
+	width: 60px;
+	height: 60px;
+	border: 1px solid var(--gainsboro);
+	border-radius: 50%;
+	overflow: hidden;
+}
+.user-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.user-summary {
+	flex: 4;
+}
+
+.user-summary .rating b {
+	font-weight: 500;
+	color: var(--limegreen);
+}
+.btn-setting {
+	float: right;
+	border: none;
+	background-color: transparent;
+	font-size: 20px;
+	color: var(--silver-gray);
+	transform: translateY(-6px);
+}
+.nickname {
+	font-size: 18px;
+	margin-top: 5px;
+}
+.point-coupon {
+	display: flex;
+	gap: 5px;
+}
+.point-coupon div {
+	background-color: var(--gloudy-gray);
+	border-radius: 20px;
+	text-align: center;
+	padding: 2px 15px;
+	display: flex;
+	justify-content: space-between;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.point-coupon div span:last-child {
+	color: var(--crimson);
+}
+.point-coupon .point {
+	flex: 3;
+}
+.point-coupon .coupon {
+	flex: 1;
+}
+
+.delivering {
+	padding: 20px;
+}
+.delivering h2 {
+	font-size: 16px;
+}
+.delivering-items {
+	border: 1px solid var(--gloudy-gray);
+	padding: 15px;
+	border-radius: 5px;
+}
+.delivering-item {
+	display: flex;
+	gap: 10px;
+	border-bottom: 1px solid var(--gloudy-gray);
+	padding: 10px 0;
+}
+.delivering-item:first-child {
+	padding-top: 0;
+}
+.delivering-item:last-child {
+	border: none;
+	padding-bottom: 0;
+}
+.delivering-item .thumb {
+	width: 60px;
+	height: 60px;
+}
+.delivering-item .thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.delivering-item .desc span {
+	font-weight: normal;
+}
+
+.delivering-item .desc b {
+	display: block;
+	color: var(--limegreen);
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.mypage .banner a img {
+	width: 100%;
+}
+.user-shortcut {
+}
+.user-shortcut a {
+	display: flex;
+	border-bottom: 1px solid var(--gloudy-gray);
+	height: 50px;
+	align-items: center;
+	padding: 0 15px;
+	font-size: 15px;
+}
+.user-shortcut a i {
+	width: 25px;
+	text-align: center;
+}
+.user-shortcut a:nth-child(5) i {
+	font-size: 19px;
+}
+.user-shortcut a:last-child {
+	border: none;
+}
+.user-shortcut a span {
+	font-weight: 400;
+	margin-left: 5px;
+}
+.user-shortcut a:after {
+	transform: rotate(-90deg);
+	background-color: transparent;
+	right: 10px;
+}
+.btn-signout {
+	background-color: var(--gainsboro);
 }

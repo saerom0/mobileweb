@@ -661,18 +661,15 @@ body {
 	vertical-align: middle;
 }
 
-/* custom select */
-.custom-select {
-	-o-appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border: 1px solid var(--gloudy-gray);
-	width: 70px;
+.cart-item-info .count-wrap button {
+	border: none;
+	background-color: var(--gloudy-gray);
+}
+
+.cart-item-info .count-wrap input {
+	width: 30px;
 	text-align: center;
-	background: url('/images/icon-carret.svg') no-repeat center right 5px;
-	background-size: 10px;
-	padding: 3px;
+	border: 1px solid var(--gloudy-gray);
 }
 .cart-items-summary {
 	padding: 20px;

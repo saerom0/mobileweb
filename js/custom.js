@@ -28,12 +28,12 @@ $(function () {
 			return text.length > 50 ? text.substr(0, 50) + '...' : text;
 		});
 
-		$('#selboxDirect').hide();
+		$('.selboxDirect').hide();
 		$('#selbox').on('change', function () {
 			if ($('#selbox').val() == 'direct') {
-				$('#selboxDirect').show();
+				$('.selboxDirect').show();
 			} else {
-				$('#selboxDirect').hide();
+				$('.selboxDirect').hide();
 			}
 		});
 
@@ -48,5 +48,29 @@ $(function () {
 	/* Cart items */
 	$('.cart-items-header .btn-all-clear').on('click', function () {
 		$('.cart-item').hide();
+		$('.cart-items-summary .price').text('0원');
+	});
+
+	/* cart-item의 수량버튼*/
+	$('.count-wrap button').on('click', function (e) {
+		e.preventDefault();
+		var $count = $(this).parent('.count-wrap').find('.input');
+		var now = parseInt($count.val());
+		var min = 1;
+		var max = 99;
+		var num = now;
+
+		if ($(this).hasClass('minus')) {
+			if (now > min) {
+				num = now - 1;
+			}
+		} else {
+			if (now < max) {
+				num = now + 1;
+			}
+		}
+		if (num != now) {
+			$count.val(num);
+		}
 	});
 });

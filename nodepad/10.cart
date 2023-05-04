@@ -4,25 +4,24 @@
 			[same html structure]
 		
 		.cart-content
-			.cart-items-outer
-				.cart-items-header
-					h3 + a.button-all-clear
-				.cart-items
-					.cart-item
-						.cart-item-title
-							input[type=checkbox]
-							p
-							a.btn-clear > i
-						.cart-item-desc
-							.cart-item-thumb
-								img
-							.cart-item-info
-								span.delivery-date
-								span.delivery-time > i
-								span.total-price
-								span.benefit
-									(em > i) * 2
-								select
+			.cart-items-header
+				h3 + a.button-all-clear
+			.cart-items
+				.cart-item
+					.cart-item-title
+						input[type=checkbox]
+						p
+						a.btn-clear > i
+					.cart-item-desc
+						.cart-item-thumb
+							img
+						.cart-item-info
+							span.delivery-date
+							span.delivery-time > i
+							span.total-price
+							span.benefit
+								(em > i) * 2
+							select
 							
 			.cart-items-summary
 				(div > span * 2) * 4

@@ -17,6 +17,23 @@ body {
 	margin-bottom: 65px;
 }
 
+/* Badge CSS */
+.badge {
+	font-size: 10px;
+	text-transform: uppercase;
+	font-family: var(--primary-en);
+	font-weight: normal;
+	border-radius: 5px;
+	padding: 0 5px;
+	color: #fff;
+}
+.badge.new {
+	background-color: var(--turquoise);
+}
+.badge.hot {
+	background-color: var(--crimson);
+}
+
 /* ### Common CSS ### */
 .btn-primary {
 	font-size: 18px;
@@ -329,6 +346,7 @@ body {
 /* ### Front html ### */
 .front-content {
 	padding: 0;
+	overflow-x: hidden;
 }
 .front-slider {
 	height: 280px;
@@ -358,6 +376,71 @@ body {
 	font-family: bootstrap-icons;
 	font-size: 22px;
 }
+
+/* Goods suggestion */
+.goods-suggestion {
+	padding: 20px;
+}
+.goods-suggestion h2 {
+	font-size: 18px;
+	line-height: 1.4em;
+}
+.goods-suggestion h2 span {
+	display: block;
+	font-size: 14px;
+	color: var(--dark-gray);
+}
+.goods-suggestion-items {
+	margin-bottom: 15px;
+	width: 430px;
+}
+.goods-suggestion-item .thumb {
+	width: 135px;
+	height: 180px;
+}
+.goods-suggestion-item .thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.goods-suggestion-item .desc {
+	width: 135px;
+}
+.goods-suggestion-item .desc img {
+	width: 100%;
+}
+
+.goods-title h3 {
+	font-size: 13px;
+	line-height: 1.2em;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+.goods-title div {
+	font-size: 13px;
+	display: flex;
+	justify-content: space-between;
+}
+.goods-title div span {
+	color: var(--crimson);
+}
+.goods-title div b {
+	font-weight: normal;
+}
+.goods-title div s {
+	color: var(--silver-gray);
+}
+.btn-goods-suggestion-more {
+	border: 1px solid var(--crimson);
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	padding: 7px;
+	border-radius: 25px;
+	font-weight: normal;
+}
+
 /* Category Navigation */
 .category-navigation {
 	height: 50px;

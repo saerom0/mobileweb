@@ -22,20 +22,18 @@ $(function () {
 	});
 
 	/* cart page */
-	$('.cart').ready(function () {
-		/* title 길이 자르기*/
-		$('.cart-item-title span').text(function (_, text) {
-			return text.length > 50 ? text.substr(0, 50) + '...' : text;
-		});
-
-		$('.selboxDirect').hide();
-		$('#selbox').on('change', function () {
-			if ($('#selbox').val() == 'direct') {
-				$('.selboxDirect').show();
-			} else {
-				$('.selboxDirect').hide();
-			}
-		});
+	/* title 길이 자르기*/
+	$('.cart-item-title span').text(function (_, text) {
+		return text.length > 50 ? text.substr(0, 50) + '...' : text;
+	});
+	/* 삭제버튼 이벤트 */
+	$('.selboxDirect').hide();
+	$('#selbox').on('change', function () {
+		if ($('#selbox').val() == 'direct') {
+			$('.selboxDirect').show();
+		} else {
+			$('.selboxDirect').hide();
+		}
 
 		/* month, date 연결 */
 		var month = new Date().getMonth() + 1;
@@ -82,5 +80,19 @@ $(function () {
 		arrows: true,
 		autoplay: true,
 		autoplaySpeed: 2500,
+	});
+
+	/* Goods Suggestion Slider */
+	$('.goods-suggestion-items').slick({
+		slidesToShow: 3,
+		dots: false,
+		arrows: false,
+		autoplay: false,
+		slidesToScroll: 2,
+	});
+
+	//slider h3 길이 조절
+	$('.goods-title h3').text(function (_, text) {
+		return text.length > 24 ? text.substr(0, 24) + '...' : text;
 	});
 });

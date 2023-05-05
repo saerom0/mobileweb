@@ -327,30 +327,62 @@ body {
 }
 
 /* ### Front html ### */
-.front {
-}
-.front-inner {
-}
 .front-content {
 	padding: 0;
 }
+.front-slider {
+	height: 280px;
+}
+.front-slider a img {
+	width: 100%;
+}
+/* Slick slider custom CSS */
+.front-slider .slick-arrow {
+	z-index: 2;
+}
+.front-slider .slick-prev {
+	left: 15px;
+}
+.front-slider .slick-next {
+	right: 15px;
+}
+.front-slider .slick-prev::before {
+	transform: rotate(180deg);
+}
+
+.front-slider .slick-prev::before,
+.front-slider .slick-next::before {
+	display: block;
+	color: var(--dark-black);
+	content: '\F285';
+	font-family: bootstrap-icons;
+	font-size: 22px;
+}
 /* Category Navigation */
 .category-navigation {
-	border: 1px solid #000;
 	height: 50px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 .category-navigation a {
-	border: 1px solid #000;
 	flex: 1;
-	/* float: left;
-	width: 20%;
-	text-align: center;
-	height: 100%;
-	line-height: 50; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-weight: normal;
 }
+.category-navigation a.active {
+	color: var(--crimson);
+	border-bottom: 3px solid var(--crimson);
+}
+
+/* Front Banner */
+.front-content .banner img {
+	width: 100%;
+}
+
 /* ### Category html ### */
 .category-content {
 	padding: 0;

@@ -74,4 +74,13 @@ $(function () {
 		}
 		if (num != now) $count.val(num);
 	});
+
+	/* Front Slider */
+	$('.front-slider').slick({
+		slidesToShow: 1,
+		dots: false,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 2500,
+	});
 });

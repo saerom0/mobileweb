@@ -14,6 +14,7 @@ $(function () {
 	});
 
 	/* recent search result */
+	// wish 버튼 toggle
 	$('.search-recent .btn-clear').on('click', function () {
 		$(this).parent().hide();
 	});
@@ -21,6 +22,10 @@ $(function () {
 		$('.search-recent .item').hide();
 	});
 
+	/* front page */
+	$('.wish').on('click', function () {
+		$(this).toggleClass('active');
+	});
 	/* cart page */
 	/* title 길이 자르기*/
 	$('.cart-item-title span').text(function (_, text) {

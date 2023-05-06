@@ -100,4 +100,9 @@ $(function () {
 	$('.goods-title h3').text(function (_, text) {
 		return text.length > 24 ? text.substr(0, 24) + '...' : text;
 	});
+
+	/* Front footer btn-view-more toggle */
+	$('.btn-view-more').on('click', function () {
+		$(this).parent().siblings().slideToggle();
+	});
 });

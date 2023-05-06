@@ -492,6 +492,7 @@ input[name='food-type-tabmenu'] {
 }
 .food-type-tab {
 	display: none;
+	counter-reset: rank;
 }
 
 /* Food type checked function */
@@ -534,7 +535,24 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 .tab-item .thumb {
 	width: 110px;
 	height: 90px;
+	position: relative;
 }
+.tab-item .thumb::before {
+	counter-increment: rank;
+	content: counter(rank);
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding-top: 4px;
+	border: 5px 0 0 0;
+}
+
 .tab-item .thumb img {
 	width: inherit;
 	height: 100%;
@@ -567,6 +585,63 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 .tab-item .goods-title div {
 	justify-content: flex-start;
 	gap: 10px;
+}
+
+/* Front footer */
+.front-footer {
+	padding: 20px;
+	background-color: var(--gloudy-gray);
+}
+.front-footer > h3 {
+	margin-bottom: 0;
+}
+.company-link {
+	margin: 5px 0;
+	display: flex;
+	justify-content: space-between;
+}
+.company-link a {
+	display: inline-block;
+	font-size: 13px;
+	text-align: center;
+}
+.company-link a::after {
+	display: inline-block;
+	content: '|';
+	color: var(--silver-gray);
+	font-size: 10px;
+	padding-left: 12px;
+	transform: translateY(-2px);
+}
+.company-link a:last-child::after {
+	display: none;
+}
+.company-info-title {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.company-info-title h3 {
+	margin-bottom: 0;
+	font-size: 16px;
+}
+.btn-view-more {
+	background-color: transparent;
+	border: none;
+}
+.btn-view-more::after {
+	content: '\F282';
+	font-family: bootstrap-icons;
+	display: inline-block;
+	margin-left: 5px;
+	transform: translateY(2px);
+}
+.company-info-more {
+	display: none;
+}
+.company-info-more span {
+	display: block;
 }
 
 /* ### Category html ### */
@@ -687,15 +762,15 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 }
 .user-photo {
 	flex: 1;
-	width: 60px;
-	height: 60px;
+	width: 70px;
+	height: 70px;
 	border: 1px solid var(--gainsboro);
 	border-radius: 50%;
 	overflow: hidden;
 }
 .user-photo img {
-	width: 100%;
-	height: 100%;
+	width: inherit;
+	height: inherit;
 	object-fit: cover;
 }
 .user-summary {

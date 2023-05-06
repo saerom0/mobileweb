@@ -467,6 +467,9 @@ body {
 }
 
 /* Food type tab menu content */
+.food-type {
+	margin-top: 30px;
+}
 input[name='food-type-tabmenu'] {
 	display: none;
 }
@@ -484,10 +487,8 @@ input[name='food-type-tabmenu'] {
 	align-items: center;
 }
 .food-type-tabs {
+	position: relative;
 	padding: 20px;
-}
-.food-type .btn-goods-suggestion-more {
-	margin: 0 20px;
 }
 .food-type-tab {
 	display: none;
@@ -524,19 +525,18 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 	display: block;
 }
 .tab-item {
+	position: relative;
 	display: flex;
 	gap: 10px;
 	margin-bottom: 10px;
 }
-.tab-item:last-child {
-	margin-bottom: 0;
-}
+
 .tab-item .thumb {
 	width: 110px;
 	height: 90px;
 }
 .tab-item .thumb img {
-	width: 100%;
+	width: inherit;
 	height: 100%;
 	object-fit: cover;
 	border-radius: 5px;

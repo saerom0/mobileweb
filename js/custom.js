@@ -14,7 +14,6 @@ $(function () {
 	});
 
 	/* recent search result */
-	// wish 버튼 toggle
 	$('.search-recent .btn-clear').on('click', function () {
 		$(this).parent().hide();
 	});
@@ -23,8 +22,15 @@ $(function () {
 	});
 
 	/* front page */
+	// wish 버튼 toggle
 	$('.wish').on('click', function () {
 		$(this).toggleClass('active');
+		if ($(this).hasClass('active')) {
+			$(this).append('<p>찜목록에 저장되었습니다.</p>');
+			setTimeout(() => {
+				$(this).children().remove();
+			}, [2000]);
+		}
 	});
 
 	/* Front Slider */

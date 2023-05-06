@@ -654,6 +654,40 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 	display: block;
 }
 
+/* ### Goods-detail page ### */
+/* header */
+.goods-detail-header {
+	height: 75px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.goods-detail-header .back-logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.goods-detail-header .back-logo h2 {
+	margin: 0;
+}
+.goods-detail-header .back-logo .btn-back {
+	color: #000;
+}
+.goods-detail-header .navigator {
+	margin-right: 10px;
+}
+
+.goods-detail-header .navigator button {
+	border: none;
+	background-color: transparent;
+	font-size: 24px;
+	color: var(--dark-gray);
+}
+.navigator .cart-alarm b em {
+	top: 3px;
+	right: -3px;
+}
+
 /* ### Category html ### */
 .category-content {
 	padding: 0;

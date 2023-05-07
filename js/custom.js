@@ -43,17 +43,6 @@ $(function () {
 		$(this).parent().siblings().slideToggle();
 	});
 
-	/* cart page */
-	// // 삭제버튼 이벤트
-	// $('.selboxDirect').hide();
-	// $('#selbox').on('change', function () {
-	// 	if ($('#selbox').val() == 'direct') {
-	// 		$('.selboxDirect').show();
-	// 	} else {
-	// 		$('.selboxDirect').hide();
-	// 	}
-	// });
-
 	// month, date 연결
 	var month = new Date().getMonth() + 1;
 	var date = new Date().getDate() + 1;
@@ -69,6 +58,18 @@ $(function () {
 		$(this).toggleClass('active');
 	});
 
+	/* goods-detail page 하단부 인터렉션 */
+	$('.btn-order-choice').on('click', function () {
+		$('.goods-order-final').slideDown(250);
+		$('.goods-order-choice').hide();
+		$('.overlay-fold').show();
+	});
+	$('.btn-fold, .overlay-fold').on('click', function () {
+		$('.goods-order-final').slideUp(250);
+		$('.goods-order-choice').show(251);
+		$('.overlay-fold').hide();
+	});
+
 	// cart-items 삭제버튼
 	$('.cart-items-header .btn-all-clear').on('click', function () {
 		$('.cart-item').hide();
@@ -78,7 +79,6 @@ $(function () {
 		);
 	});
 	$('.cart-item-title .btn-clear').on('click', function () {
-		console.log('click');
 		$(this).parent().parent().hide();
 	});
 

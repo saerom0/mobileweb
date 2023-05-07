@@ -101,9 +101,41 @@
       </div>
     </div>
     <div class="goods-order-info">
-      <div class="goods-order-choice"></div>
-      <div class="goods-order-final"></div>
+      <div class="goods-order-choice">
+        <span class="wish"></span>
+        <button class="btn-primary btn-order-choice">구매하기</button>
+      </div>
+      <div class="goods-order-final">
+        <button class="btn-fold"><i class="bi bi-chevron-down"></i></button>
+        <div class="goods-order-final-info">
+          <span class="info-badge arrival">내일도착</span>
+          <div class="goods-title">
+            <h3>간편하게 해먹는 고소한 알리오 올리오, 해물 가득한 스파게티 등 양식 밀키트 4종세트 골라담기</h3>
+            <div>
+              <span>20%</span><b>14,400원</b><s>18,000원</s>
+              <div class="count-wrap">
+                <button type="button" class="minus">-</button>
+                <input type="text" class="input" value="1"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                <button type="button" class="plus">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment-benefit">
+          <b>결제 혜택</b>
+          <p>하나카드 5만원 결제 시 최대 8개월 무이지 할부
+            PAYCO 생애 첫 결제 시 2,000원 즉시 할인<br>
+            <a href="#">더보기</a>
+          </p>
+        </div>
+        <div class="goods-order-btns">
+          <button class="btn-primary btn-cart">장바구니</button>
+          <button class="btn-primary btn-now-order">바로구매</button>
+        </div>
+      </div>
     </div>
+    <div class="overlay-fold"></div>
   </div>
 
 </body>

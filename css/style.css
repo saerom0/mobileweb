@@ -206,10 +206,16 @@ body {
 	font-family: var(--primary-en);
 }
 
-/* ### Preloading html ### */
-.preloading {
-	height: 750px;
+/* GNB navigation color */
+.category #gnb a:nth-child(1),
+.search #gnb a:nth-child(2),
+.front #gnb a:nth-child(3),
+.mypage #gnb a:nth-child(4),
+.cart #gnb a:nth-child(5) {
+	color: var(--crimson);
 }
+
+/* ### Preloading html ### */
 .preloading-inner {
 	position: relative;
 	height: inherit;
@@ -475,9 +481,6 @@ body {
 	padding: 0;
 	overflow-x: hidden;
 }
-.front-slider {
-	height: 280px;
-}
 .front-slider a img {
 	width: 100%;
 }
@@ -700,7 +703,7 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 
 /* ### Goods-detail page ### */
 .goods-detail-content {
-	padding: 0;
+	padding: 0 0 20px 0;
 }
 
 /* header */
@@ -1330,4 +1333,17 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 .cart-notice li::before {
 	content: '';
 	margin-right: 5px;
+}
+
+@media (min-width: 400px) {
+	.goods-suggestion-items {
+		width: 500px;
+	}
+	.goods-suggestion-item .thumb {
+		width: 155px;
+		height: 200px;
+	}
+	.goods-suggestion-item .desc {
+		width: 155px;
+	}
 }

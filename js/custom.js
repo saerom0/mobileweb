@@ -22,6 +22,11 @@ $(function () {
 	});
 
 	/* front page */
+	//category-navigation
+	$('.category-navigation a').on('click', function () {
+		$(this).addClass('active');
+		$(this).siblings().removeClass('active');
+	});
 	// wish 버튼 toggle
 	$('.wish').on('click', function () {
 		$(this).toggleClass('active');
@@ -33,10 +38,16 @@ $(function () {
 		}
 	});
 
-	//slider h3 길이 조절
-	$('.goods-title .title-cut').text(function (_, text) {
-		return text.length > 24 ? text.substr(0, 24) + '...' : text;
-	});
+	//slider title 길이 조절
+	if ($(window).width() <= 400) {
+		$('.goods-title .title-cut').text(function (_, text) {
+			return text.length > 24 ? text.substr(0, 24) + '...' : text;
+		});
+	} else if ($(window).width() <= 600) {
+		$('.goods-title .title-cut').text(function (_, text) {
+			return text.length > 29 ? text.substr(0, 28) + '...' : text;
+		});
+	}
 
 	// Front footer btn-view-more toggle
 	$('.btn-view-more').on('click', function () {

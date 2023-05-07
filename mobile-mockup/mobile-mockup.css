@@ -1,18 +1,24 @@
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+
+	/* padding: 0; */
 }
 body {
+	margin: 0;
 	height: 100vh;
+}
+.mockup-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	padding: 50px 0;
+	gap: 110px;
 }
 
 .mobile-mockup {
 	position: relative;
-	width: 405px;
+	width: 400px;
 	height: 800px;
 	border-radius: 40px;
 	background-color: #000;
@@ -23,7 +29,7 @@ body {
 
 .iframe-url {
 	background-color: #fff;
-	width: calc(405px - 20px);
+	width: calc(400px - 20px);
 	height: calc(800px - 26px);
 	border-radius: 35px;
 	overflow: hidden;

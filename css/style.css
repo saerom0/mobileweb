@@ -764,8 +764,9 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 
 .goods-info .goods-title div {
 	justify-content: flex-start;
-	gap: 10px;
+	gap: 15px;
 	font-size: 20px;
+	margin-top: 15px;
 }
 .goods-info .goods-title div span {
 	margin-right: auto;
@@ -774,12 +775,62 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 .goods-delivery-info {
 	display: flex;
 	gap: 10px;
+	margin: 20px 0;
+	padding-top: 20px;
+	border-top: 1px solid var(--gloudy-gray);
 }
 .goods-delivery-info p {
 	margin: 0;
 }
+.goods-delivery-info b {
+	font-weight: normal;
+}
+
 .goods-delivery-info p span {
 	display: block;
+}
+.goods-delivery-info p span em {
+	font-style: normal;
+	color: var(--silver-gray);
+}
+
+/* goods-detail-desc */
+.goods-detail-desc img {
+	width: 100%;
+}
+.goods-detail-desc p {
+	padding: 20px;
+	text-align: center;
+}
+
+/* goods-detail-accordion */
+.goods-accordion .title {
+	border-bottom: 1px solid var(--gloudy-gray);
+	height: 40px;
+	font-weight: normal;
+	padding-left: 20px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.goods-accordion .title::after {
+	content: '\f64d';
+	font-family: bootstrap-icons;
+	position: absolute;
+	right: 20px;
+	transition: transform 0.5s;
+}
+.goods-accordion .title.active {
+	color: var(--crimson);
+}
+.goods-accordion .title.active::after {
+	content: '\f63b';
+	font-family: bootstrap-icons;
+	transform: rotate(-180deg);
+}
+
+.goods-accordion .detail {
+	display: none;
 }
 
 /* ### Category html ### */

@@ -61,6 +61,14 @@ $(function () {
 	$('.delivery-date .month').text(month);
 	$('.delivery-date .date').text(date);
 
+	$('.goods-accordion .detail').eq(0).show();
+	$('.goods-accordion .title').on('click', function () {
+		$(this).next().stop().slideToggle();
+		$(this).siblings('.goods-accordion .title').next().stop().slideUp();
+		$(this).siblings('.goods-accordion .title').removeClass('active');
+		$(this).toggleClass('active');
+	});
+
 	// cart-items 삭제버튼
 	$('.cart-items-header .btn-all-clear').on('click', function () {
 		$('.cart-item').hide();

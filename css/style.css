@@ -103,6 +103,22 @@ body {
 .logo {
 	font-family: var(--logo-en);
 }
+/* Btn-share CSS */
+.btn-share {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: none;
+}
+.btn-share i {
+	font-size: 17px;
+	margin-left: -2px;
+	margin-top: -1px;
+}
 
 /* main header CSS */
 .main-header {
@@ -174,7 +190,6 @@ body {
 	position: absolute;
 	top: 75px;
 	left: 30px;
-	/* border: 1px solid #000; */
 }
 .heading-preloading .logo {
 	font-size: 32px;
@@ -655,6 +670,10 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 }
 
 /* ### Goods-detail page ### */
+.goods-detail-content {
+	padding: 0;
+}
+
 /* header */
 .goods-detail-header {
 	height: 75px;
@@ -686,6 +705,81 @@ input[id='food-type-tab6']:checked ~ .food-type-tabs .tab6 {
 .navigator .cart-alarm b em {
 	top: 3px;
 	right: -3px;
+}
+/* goods-detail slider */
+.goods-detail-slider-outer {
+	position: relative;
+}
+
+.goods-detail-slider a {
+	width: 100%;
+	height: 350px;
+}
+.goods-detail-slider a img {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+.goods-detail-slider .slick-dots {
+	bottom: 15px;
+}
+
+.goods-detail-slider .slick-dots li button:before {
+	color: #fff;
+	opacity: 1;
+}
+.goods-detail-slider .slick-dots li.slick-active button:before {
+	color: var(--crimson);
+}
+.goods-detail-slider .slick-dots li {
+	margin: 0;
+}
+.goods-detail-slider.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
+/* goods-detail info */
+.goods-info {
+	padding: 20px;
+}
+.goods-rating {
+	display: flex;
+	justify-content: flex-end;
+}
+.stars .bi {
+	color: var(--gold);
+}
+.stars em {
+	font-style: normal;
+	font-size: 13px;
+	color: var(--royalblue);
+}
+.goods-info .goods-title {
+	width: 100%;
+}
+.goods-info .goods-title h3 {
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.goods-info .goods-title div {
+	justify-content: flex-start;
+	gap: 10px;
+	font-size: 20px;
+}
+.goods-info .goods-title div span {
+	margin-right: auto;
+}
+
+.goods-delivery-info {
+	display: flex;
+	gap: 10px;
+}
+.goods-delivery-info p {
+	margin: 0;
+}
+.goods-delivery-info p span {
+	display: block;
 }
 
 /* ### Category html ### */

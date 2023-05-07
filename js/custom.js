@@ -33,26 +33,8 @@ $(function () {
 		}
 	});
 
-	/* Front Slider */
-	$('.front-slider').slick({
-		slidesToShow: 1,
-		dots: false,
-		arrows: true,
-		autoplay: true,
-		autoplaySpeed: 2500,
-	});
-
-	/* Goods Suggestion Slider */
-	$('.goods-suggestion-items').slick({
-		slidesToShow: 3,
-		dots: false,
-		arrows: false,
-		autoplay: false,
-		slidesToScroll: 2,
-	});
-
 	//slider h3 길이 조절
-	$('.goods-title h3').text(function (_, text) {
+	$('.goods-title .title-cut').text(function (_, text) {
 		return text.length > 24 ? text.substr(0, 24) + '...' : text;
 	});
 
@@ -62,28 +44,24 @@ $(function () {
 	});
 
 	/* cart page */
-	// title 길이 자르기
-	$('.cart-item-title span').text(function (_, text) {
-		return text.length > 50 ? text.substr(0, 50) + '...' : text;
-	});
-	// 삭제버튼 이벤트
-	$('.selboxDirect').hide();
-	$('#selbox').on('change', function () {
-		if ($('#selbox').val() == 'direct') {
-			$('.selboxDirect').show();
-		} else {
-			$('.selboxDirect').hide();
-		}
+	// // 삭제버튼 이벤트
+	// $('.selboxDirect').hide();
+	// $('#selbox').on('change', function () {
+	// 	if ($('#selbox').val() == 'direct') {
+	// 		$('.selboxDirect').show();
+	// 	} else {
+	// 		$('.selboxDirect').hide();
+	// 	}
+	// });
 
-		// month, date 연결
-		var month = new Date().getMonth() + 1;
-		var date = new Date().getDay() + 1;
+	// month, date 연결
+	var month = new Date().getMonth() + 1;
+	var date = new Date().getDate() + 1;
 
-		$('.cart-item-info .delivery-date b').eq(0).text(month);
-		$('.cart-item-info .delivery-date b').eq(1).text(date);
-	});
+	$('.delivery-date .month').text(month);
+	$('.delivery-date .date').text(date);
 
-	// Cart items 삭제버튼
+	// cart-items 삭제버튼
 	$('.cart-items-header .btn-all-clear').on('click', function () {
 		$('.cart-item').hide();
 		$('.cart-items-summary .price').text('0원');
@@ -111,5 +89,32 @@ $(function () {
 			if (now < max) num = now + 1;
 		}
 		if (num != now) $count.val(num);
+	});
+
+	/* Front Slider */
+	$('.front-slider').slick({
+		slidesToShow: 1,
+		dots: false,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 2500,
+	});
+
+	/* Goods Suggestion Slider */
+	$('.goods-suggestion-items').slick({
+		slidesToShow: 3,
+		dots: false,
+		arrows: false,
+		autoplay: false,
+		slidesToScroll: 2,
+	});
+
+	/* goods-detail Slider */
+	$('.goods-detail-slider').slick({
+		slidesToShow: 1,
+		dots: true,
+		arrows: false,
+		autoplay: false,
+		slidesToScroll: 1,
 	});
 });

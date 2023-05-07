@@ -44,4 +44,7 @@
 	--gainsboro: #dcdcdc;
 	--fuschia: #fcddec;
 	--light-beige: #f2e8d5;
+
+	/* Device screen width에 따른 비율 적용 */
+	--slide-basis: 375px;
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to Today's Meal Kit</title>
 </head>
 
@@ -15,7 +16,7 @@
       /iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i
     ) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
       // alert("Mobile로 방문하셨습니다.");
-      location.href = "/preloading.html";
+      location.href = "/html/preloading.html";
     } else {
       // alert("PC로 방문하셨습니다.");
       location.href = "/mobile-mockup/single-view.html";
